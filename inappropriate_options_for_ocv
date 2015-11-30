@@ -1,0 +1,8 @@
+-fssa-phiopt
+-ftree-loop-vectorize
+-fdevirtualize-speculatively
+-fipa-cp-alignment
+-fipa-icf
+-fisolate-erroneous-paths-dereference
+-flra-remat
+-fipa-ra

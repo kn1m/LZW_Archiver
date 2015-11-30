@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.3)
+cmake_minimum_required(VERSION 3.2)
 project(LZW_Archiver)
 
 find_package(Boost COMPONENTS system filesystem unit_test_framework REQUIRED)
@@ -12,11 +12,11 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
 # Optimization flags
 
-#set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -freorder-blocks -ftree-loop-vectorize -ftree-slp-vectorize -falign-functions
-# -falign-jumps -falign-loops -fcaller-saves -fcrossjumping -fcse-follow-jumps -fexpensive-optimizations
-# -fgcse -fhoist-adjacent-loads -finline-small-functions -fipa-sra -foptimize-sibling-calls -fpeephole2
-# -freorder-blocks-and-partition -freorder-functions -frerun-cse-after-loop -fschedule-insns
-# -fschedule-insns2 -ftree-pre -ftree-vrp")
+set(CMAKE_COMPILE_FLAGS "${CMAKE_COMPILE_FLAGS} -freorder-blocks -ftree-loop-vectorize -ftree-slp-vectorize -falign-functions
+    -falign-jumps -falign-loops -fcaller-saves -fcrossjumping -fcse-follow-jumps -fexpensive-optimizations -fgcse
+    -fhoist-adjacent-loads -finline-small-functions -fipa-sra -foptimize-sibling-calls -fpeephole2 -freorder-blocks
+    -and-partition -freorder-functions -frerun-cse-after-loop -fschedule-insns s-fschedule-insns2 -ftree-pre
+    -ftree-vrp")
 
 
 set(SOURCE_FILES main.cpp)

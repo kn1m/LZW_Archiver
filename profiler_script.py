@@ -60,13 +60,11 @@ if args.speed:
                 if len(opt) > 0:
                     all_flags += 1
                     filename = "opt/" + opt[2:] + ".o"
-                    print(" >>> Processing " + filename)
+                    print("Checking: " + filename)
 
-                    #compile files
                     compile_opt_run = run_gcc_base + [opt] + src +  ["-o", filename]
                     os.system(" ".join(compile_opt_run))
 
-                    #compare file with start version
                     check_file(test_filename, filename, output)
         output.close()
 
@@ -77,15 +75,14 @@ if args.speed:
 
         used_flags = len(options)
 
-        print("  ====> FINISHED! {0} of {1} flags made some noise.".format(used_flags, all_flags))
+        print("{0} of {1} flags were useful.".format(used_flags, all_flags))
 
-        print("  ====> Compiling file with all useful flags.")
+        print("Object file with best flags compiled.")
 
         final_filename = "opt/core_bo.o"
         final_complile_run = run_gcc_base + options + src + ["-o", final_filename]
         os.system(" ".join(final_complile_run))
         check_file(test_filename, final_filename)
-        print("  ====> FINISHED!")
         
 if args.remove_old:
     [os.system("rm " + x) for x in glob.glob('callgrind.out.*')]

@@ -20,7 +20,6 @@
 -freorder-blocks
 -fshrink-wrap
 -fsplit-wide-types
--fssa-phiopt
 -ftree-bit-ccp
 -ftree-ccp
 -ftree-ch
@@ -38,17 +37,14 @@
 -ftree-pta
 -ftree-ter
 -funit-at-a-time
-
 -finline-functions
 -funswitch-loops
 -fgcse-after-reload
--ftree-loop-vectorize
 -ftree-loop-distribute-patterns
 -ftree-slp-vectorize
 -fvect-cost-model
 -ftree-partial-pre
 -fipa-cp-clone
-
 -fthread-jumps
 -falign-functions 
 -falign-jumps
@@ -59,8 +55,7 @@
 -fcse-follow-jumps
 -fcse-skip-blocks
 -fdelete-null-pointer-checks
--fdevirtualize 
--fdevirtualize-speculatively
+-fdevirtualize
 -fexpensive-optimizations
 -fgcse
 -fgcse-lm
@@ -68,11 +63,7 @@
 -finline-small-functions
 -findirect-inlining
 -fipa-cp
--fipa-cp-alignment
 -fipa-sra
--fipa-icf
--fisolate-erroneous-paths-dereference
--flra-remat
 -foptimize-sibling-calls
 -foptimize-strlen
 -fpartial-inlining
@@ -91,6 +82,5 @@
 -ftree-tail-merge
 -ftree-pre
 -ftree-vrp
--fipa-ra
 
 
